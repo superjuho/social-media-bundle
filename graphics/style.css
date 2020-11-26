@@ -17,7 +17,7 @@ body {
 }
 
 #twitchAccount {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   align-items: center;
 }
@@ -53,23 +53,26 @@ body {
 }
 
 #twitchLogo {
-  float: left;
+  float: right;
   width: 30px;
   height: 30px;
+  margin: 5px;
   animation: rollingSyke 3s linear 0s infinite alternate none;
 }
 
 #instagramLogo {
-  float: left;
+  float: right;
   width: 30px;
   height: 30px;
+  margin: 5px;
   animation: rollingSyke 3s linear 0s infinite alternate none;
 }
 
 #youtubeLogo {
-  float: left;
+  float: right;
   width: 30px;
   height: 30px;
+  margin: 5px;
   animation: rollingSyke 3s linear 0s infinite alternate none;
 }
 
@@ -88,6 +91,8 @@ p {
   float: left;
   margin: 3px;
   font-size: 20px;
+  color: dimgray;
+  font-family: 'Sansita Swashed', cursive;
   animation-name: zooming;
   animation-iteration-count: infinite;
   animation-direction: alternate;
