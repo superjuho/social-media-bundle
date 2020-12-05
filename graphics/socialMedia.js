@@ -6,15 +6,18 @@ const youtubeElement = document.getElementById('youtubeAccount');
 const twitchAccount = document.getElementById('twitch');
 const instagramAccount = document.getElementById('instagram');
 const youtubeAccount = document.getElementById('youtube');
+const socialBox = document.querySelector('.social-box');
+
+
 
 const tl = gsap.timeline();
 nodecg.listenFor('showSocialMedia', (data) => {
 twitchAccount.innerHTML = data.twitch;
 instagramAccount.innerHTML = data.instagram;
 youtubeAccount.innerHTML = data.youtube;
-window.setInterval(myCallback, 2100);
+window.setInterval(thisCallback, 2100);
 
-function myCallback() {
+function thisCallback() {
 twitchElement.style["opacity"] = 0.8;
 tl.from([twitchElement], 5, {opacity: 0}, "+=1");
 tl.to([twitchElement], 1, {opacity: 0});
@@ -27,3 +30,11 @@ tl.to([youtubeElement], 1, {opacity: 0});
 };
 
 })
+
+nodecg.listenFor('showMediaSpinner', () => {
+	socialBox.style["opacity"] = "1";
+});
+
+nodecg.listenFor('hideMediaSpinner', () => {
+	socialBox.style["opacity"] = "0";
+});
